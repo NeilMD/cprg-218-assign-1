@@ -1,0 +1,50 @@
+/*
+    Card Container Class Style
+
+    - Modifies card container div to wrap all card into a row
+    - Remove extra padding on the left
+    - Align all cards to center
+    - Add 1 rem gap between cards
+*/
+.card-container{
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 0px;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/*
+    Card Class Style
+
+    - Remove bullet points of ul tag
+    - Allow cards to adjust width based on the available size within row
+    - Note: Whenever only 1 card is in a row, it will take up the whole space. (flex-grow effect)
+*/
+.card {
+    list-style-type: none;
+    flex-grow: 1;
+}
+
+/*
+    Tablet Style
+
+    - Adjust cards to have at least 2 items per row
+*/
+@media ( 768px <= width <= 1200px) {
+    .card {
+        flex-basis: 45%; 
+    }
+    
+}
+
+/*
+    Desktop Style
+
+    - Adjust cards to have at least 3 items per row
+*/
+@media (width >= 1200px) {
+    .card {
+        flex-basis: 30%; 
+    }
+}
